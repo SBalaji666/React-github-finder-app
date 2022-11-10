@@ -4,7 +4,7 @@ const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 
 const github = axios.create({
   baseURL: GITHUB_URL,
-  headers: { Authorization: `token ${GITHUB_TOKEN}` },
+  // headers: { Authorization: `token ${GITHUB_TOKEN}` },
 });
 
 // Get Search Results
