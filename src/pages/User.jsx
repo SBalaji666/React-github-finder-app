@@ -41,6 +41,8 @@ function User() {
     avatar_url,
   } = user;
 
+  const websiteUrl = blog?.startsWith('http') ? blog : 'https://' + blog;
+
   return (
     <div className="w-100 mx-auto lg:w-10/12">
       <div className="mb-4">
@@ -93,8 +95,8 @@ function User() {
               <div className="stat">
                 <div className="stat-title text-md">Website</div>
                 <div className="stat-value text-lg">
-                  <a href={`https://${blog}`} target="_blank" rel="noreferrer">
-                    {blog}
+                  <a href={websiteUrl} target="_blank" rel="noreferrer">
+                    {websiteUrl}
                   </a>
                 </div>
               </div>
